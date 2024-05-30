@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6lunpv0osu0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nnl7"]
+bg_color = Color(0.94902, 0.94902, 0.94902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p05fs"]
+bg_color = Color(0.94902, 0.94902, 0.94902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvh7r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgxd0"]
+bg_color = Color(0.203922, 0.203922, 0.203922, 1)
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="FontVariation" id="FontVariation_ray0r"]
+spacing_top = -10
+spacing_bottom = -10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bcyj1"]
+bg_color = Color(0.203922, 0.203922, 0.203922, 1)
+corner_radius_bottom_right = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_eurdt"]
+font_size = 30
+font_color = Color(0.203922, 0.203922, 0.203922, 1)
+
+[node name="SetCard" type="Button"]
+custom_minimum_size = Vector2(300, 200)
+offset_right = 300.0
+offset_bottom = 200.0
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nnl7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p05fs")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kvh7r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_p05fs")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sgxd0")
+
+[node name="AddCardButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_fonts/font = SubResource("FontVariation_ray0r")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_bcyj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bcyj1")
+text = "+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hello"
+label_settings = SubResource("LabelSettings_eurdt")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
